@@ -1,0 +1,10 @@
+console.log('analisando se determinada letra é vogal ou consoante...')
+ console.log('letra: $(letra)');
+
+ switch (true) { 
+   case letra == 'a' || letra == 'e' || letra == '1' || letra == 'o' || 
+    console.log ('A letra analizada é vogal'); 
+    break;
+  default: 
+    console.log ('A letra analizada é uma consoante'); 
+ }
