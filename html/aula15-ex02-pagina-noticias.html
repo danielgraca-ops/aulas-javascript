@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Notícias - Jornal da Cidade</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eeeeee;
+            color: #222222;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        #pagina {
+            max-width: 960px;
+            width: 100%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+        }
+
+        #topo {
+            padding: 24px;
+            background-color: #17365d;
+            color: #ffffff;
+        }
+
+        #topo h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        #topo p {
+            margin: 8px 0 0;
+            color: #d9e5f2;
+        }
+
+        #menu {
+            padding: 12px 24px;
+            background-color: #244a73;
+        }
+
+        #menu a {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 22px;
+            font-weight: bold;
+        }
+
+        #menu a:hover {
+            text-decoration: underline;
+        }
+
+        #conteudo {
+            padding: 24px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        #noticias {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .chamada {
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .categoria {
+            color: #b22222;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .data {
+            color: #777777;
+            font-size: 12px;
+        }
+
+        .imagem-noticia {
+            width: 100%;
+            height: 180px;
+            background-color: #d9e2ec;
+            object-fit: cover;
+            display: block;
+        }
+
+        #lateral {
+            flex: 0 0 260px;
+            padding: 16px;
+            background-color: #f3f5f7;
+            border: 1px solid #dddddd;
+        }
+
+        #lateral h2 {
+            margin-top: 0;
+            color: #17365d;
+            font-size: 20px;
+        }
+
+        #lateral li {
+            margin-bottom: 12px;
+        }
+
+        .cadastro {
+            border: 1px solid #cccccc;
+            padding: 12px;
+        }
+
+        .cadastro legend {
+            font-weight: bold;
+            color: #17365d;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #999999;
+        }
+
+        input[type="submit"] {
+            margin-top: 12px;
+            padding: 10px 16px;
+            background-color: #17365d;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input:focus,
+        a:focus {
+            outline: 2px solid #b22222;
+            outline-offset: 3px;
+        }
+
+        #rodape {
+            padding: 18px 24px;
+            background-color: #17365d;
+            color: #ffffff;
+            font-size: 12px;
+        }
+
+        #rodape p {
+            margin: 4px 0;
+        }
+
+        @media (max-width: 700px) {
+            #pagina {
+                margin: 0;
+            }
+
+            #conteudo {
+                flex-direction: column;
+            }
+
+            #noticias,
+            #lateral {
+                width: 100%;
+                flex: auto;
+            }
+
+            #menu a {
+                margin: 5px 12px 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pagina">
+
+        <header id="topo">
+            <h1>Jornal da Cidade</h1>
+            <p>Informação, comunidade e tudo o que acontece perto de você.</p>
+        </header>
+
+        <nav id="menu" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#cidade">Cidade</a>
+            <a href="#educacao">Educação</a>
+            <a href="#tecnologia">Tecnologia</a>
+            <a href="#esportes">Esportes</a>
+        </nav>
+
+        <main id="conteudo">
+
+            <section id="noticias" aria-label="Notícias principais">
+
+                <article class="chamada" id="educacao">
+                    <span class="categoria">Educação</span>
+
+                    <h2>Escolas municipais iniciam projeto de tecnologia para jovens</h2>
+
+                    <p class="data">
+                        Publicado em
+                        <time datetime="2026-10-14">14 de outubro de 2026</time>
+                        | Por Redação
+                    </p>
+
+                    <img
+                        class="imagem-noticia"
+                        src="https://placehold.co/610x180/ccd9e8/17365d?text=Projeto+de+Tecnologia"
+                        alt="Ilustração de um projeto de tecnologia para estudantes">
+
+                    <p>
+                        Estudantes de diferentes escolas participarão de oficinas
+                        de programação, robótica e criação de sites. A iniciativa
+                        pretende aproximar os jovens das profissões ligadas à tecnologia.
+                    </p>
+
+                    <p>
+                        As atividades acontecerão durante o semestre e contarão
+                        com desafios práticos desenvolvidos em equipes.
+                    </p>
+
+                    <p><a href="#tecnologia">Leia mais sobre tecnologia</a></p>
+                </article>
+
+                <article class="chamada" id="cidade">
+                    <span class="categoria">Cidade</span>
+
+                    <h2>Parque central receberá melhorias nas áreas de lazer</h2>
+
+                    <p class="data">
+                        Publicado em
+                        <time datetime="2026-10-13">13 de outubro de 2026</time>
+                        | Por Marina Costa
+                    </p>
+
+                    <img
+                        class="imagem-noticia"
+                        src="https://placehold.co/610x180/d8e7d2/285c36?text=Parque+Central"
+                        alt="Ilustração de um parque com áreas verdes">
+
+                    <p>
+                        O projeto prevê a recuperação dos bancos, a instalação
+                        de novas luminárias e a revitalização do espaço destinado
+                        às crianças.
+                    </p>
+
+                    <p>
+                        Segundo a prefeitura, as obras serão realizadas em etapas
+                        para manter parte do parque aberta ao público.
+                    </p>
+
+                    <p><a href="#cidade">Mais informações sobre a cidade</a></p>
+                </article>
+
+                <article class="chamada" id="esportes">
+                    <span class="categoria">Esportes</span>
+
+                    <h2>Equipe juvenil conquista título em campeonato regional</h2>
+
+                    <p class="data">
+                        Publicado em
+                        <time datetime="2026-10-12">12 de outubro de 2026</time>
+                        | Por Rafael Mendes
+                    </p>
+
+                    <p>
+                        Após uma final disputada, a equipe juvenil da cidade
+                        conquistou o campeonato regional. A vitória foi comemorada
+                        por atletas, familiares e torcedores.
+                    </p>
+
+                    <p>
+                        O treinador destacou a dedicação do grupo e afirmou que
+                        os treinos continuarão para as próximas competições.
+                    </p>
+
+                    <p><a href="#esportes">Mais notícias de esportes</a></p>
+                </article>
+
+                <article class="chamada" id="tecnologia">
+                    <span class="categoria">Tecnologia</span>
+                    <h2>Jovens participam de oficinas de criação de sites</h2>
+
+                    <p class="data">
+                        Publicado em
+                        <time datetime="2026-10-10">10 de outubro de 2026</time>
+                        | Por Redação
+                    </p>
+
+                    <p>
+                        As oficinas apresentam conceitos de HTML e CSS e incentivam
+                        os estudantes a criar suas próprias páginas na internet.
+                    </p>
+                </article>
+
+            </section>
+
+            <aside id="lateral" aria-label="Informações complementares">
+
+                <section aria-labelledby="ultimas">
+                    <h2 id="ultimas">Últimas notícias</h2>
+
+                    <ul>
+                        <li><a href="#cidade">Biblioteca amplia horário de atendimento</a></li>
+                        <li><a href="#educacao">Feira de ciências abre inscrições</a></li>
+                        <li><a href="#cidade">Transporte público terá novos horários</a></li>
+                        <li><a href="#cidade">Projeto local incentiva a reciclagem</a></li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="mais-lidas">
+                    <h2 id="mais-lidas">Mais lidas</h2>
+
+                    <ol>
+                        <li><a href="#tecnologia">Como participar das oficinas gratuitas</a></li>
+                        <li><a href="#cidade">Confira o calendário de eventos</a></li>
+                        <li><a href="#esportes">Veja os resultados do campeonato</a></li>
+                    </ol>
+                </section>
+
+                <section aria-labelledby="novidades">
+                    <h2 id="novidades">Receba novidades</h2>
+
+                    <p>Cadastre seu e-mail para receber o resumo semanal.</p>
+
+                    <form action="#" method="post" role="form"
+                          aria-label="Cadastro para receber notícias">
+
+                        <fieldset class="cadastro">
+                            <legend>Cadastro de e-mail</legend>
+
+                            <label for="email">Seu e-mail:</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="exemplo@email.com"
+                                required>
+
+                            <input type="submit" value="Cadastrar">
+                        </fieldset>
+
+                    </form>
+                </section>
+
+            </aside>
+
+        </main>
+
+        <footer id="rodape">
+            <p>Jornal da Cidade - Projeto didático de HTML e CSS.</p>
+            <p>Contato: contato@jornaldacidade.exemplo | © 2026</p>
+        </footer>
+
+    </div>
+</body>
+</html>
