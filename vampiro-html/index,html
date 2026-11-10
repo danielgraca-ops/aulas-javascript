@@ -1,0 +1,455 @@
+OCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Walking Date</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #151515;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222;
+            padding: 30px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ff4444;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        section {
+            background-color: #252525;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #ff4444;
+            margin-bottom: 15px;
+        }
+
+        figure {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        figure img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 10px;
+        }
+
+        figcaption {
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        aside {
+            background-color: #4a2020;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        article {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        blockquote {
+            font-style: italic;
+        }
+
+        details {
+            background-color: #333;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #777;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #5b2020;
+        }
+
+        form {
+            margin-top: 15px;
+        }
+
+        fieldset {
+            padding: 20px;
+            border: 1px solid #777;
+            border-radius: 8px;
+        }
+
+        legend {
+            color: #ff5555;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            padding: 10px;
+            width: 100%;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input[type="radio"] {
+            width: auto;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #222;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. Cabeçalho Principal -->
+    <header>
+
+        <!-- 2. Estilo Inline no Título -->
+        <h1 style="color: darkred; text-align: center;">
+            The Walking Date
+        </h1>
+
+        <!-- 3. Slogan -->
+        <p>
+            Encontre seu verdadeiro amor pós-vida.
+            <em>Até que a morte nos separe!</em>
+        </p>
+
+        <!-- 4 e 5. Menu de Links -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- 6. Conteúdo Principal -->
+    <main>
+
+        <!-- 7, 8 e 9. Seção de Boas-Vindas e Imagem -->
+        <section id="inicio">
+
+            <h2>Bem-vindo ao mundo dos zumbis!</h2>
+
+            <figure>
+                <img
+                    src="https://images.unsplash.com/photo-1509248961158-e54f6934749c"
+                    alt="Casal de zumbis felizes">
+
+                <figcaption>
+                    Amor verdadeiro além do túmulo!
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <!-- 10, 11 e 12. Benefícios -->
+        <section id="beneficios">
+
+            <h2>Por que usar o The Walking Date?</h2>
+
+            <ol>
+                <li>
+                    Conhecer pessoas com os mesmos
+                    <strong>interesses</strong>.
+                </li>
+
+                <li>
+                    Encontrar seu parceiro para
+                    <strong>aventuras</strong>.
+                </li>
+
+                <li>
+                    Participar de encontros
+                    <strong>carnívoros</strong>.
+                </li>
+
+                <li>
+                    Encontrar um amor para a
+                    <strong>eternidade</strong>.
+                </li>
+            </ol>
+
+        </section>
+
+        <!-- 13. Conteúdo Periférico -->
+        <aside>
+            <h3>Dica do Cupido Zumbi</h3>
+
+            <p>
+                Cuidado com encontros com sobreviventes armados!
+                Escolha bem quem vai conquistar seu coração.
+            </p>
+        </aside>
+
+        <!-- 14 e 15. Depoimentos -->
+        <section id="depoimentos">
+
+            <h2>Depoimentos</h2>
+
+            <article>
+
+                <blockquote>
+                    "Nunca imaginei encontrar alguém tão especial
+                    depois de virar zumbi. Agora tenho companhia
+                    para a eternidade!"
+                </blockquote>
+
+                <cite>— Zumbi apaixonado</cite>
+
+            </article>
+
+        </section>
+
+        <!-- 16 e 17. Perguntas Frequentes -->
+        <section id="faq">
+
+            <h2>Perguntas Frequentes (FAQ)</h2>
+
+            <details>
+
+                <summary>
+                    Zumbis veganos são aceitos?
+                </summary>
+
+                <p>
+                    Sim! Todos são bem-vindos, independentemente
+                    de sua dieta.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Preciso estar morto para participar?
+                </summary>
+
+                <p>
+                    Não! Sobreviventes também podem participar,
+                    desde que respeitem as regras.
+                </p>
+
+            </details>
+
+        </section>
+
+        <!-- 18 e 19. Tabela de Preços -->
+        <section id="planos">
+
+            <h2>Nossos Planos</h2>
+
+            <table>
+
+                <caption>Planos de Assinatura</caption>
+
+                <thead>
+                    <tr>
+                        <th>Plano</th>
+                        <th>Benefícios</th>
+                        <th>Preço em Cérebros</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Básico</td>
+                        <td>Conhecer pessoas</td>
+                        <td>2 cérebros</td>
+                    </tr>
+
+                    <tr>
+                        <td>Premium</td>
+                        <td>Encontros ilimitados</td>
+                        <td>5 cérebros</td>
+                    </tr>
+
+                    <tr>
+                        <td>Diamante</td>
+                        <td>Todos os benefícios</td>
+                        <td>10 cérebros</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- 20 a 24. Cadastro -->
+        <section id="cadastro">
+
+            <h2>Faça seu Cadastro</h2>
+
+            <form action="#" method="POST">
+
+                <!-- 21. Agrupamento de Campos -->
+                <fieldset>
+
+                    <legend>Seus Dados Mortais</legend>
+
+                    <!-- 22. Campos de Texto e Email -->
+                    <label for="nome">Nome:</label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required>
+
+                    <label for="email">Email:</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu email"
+                        required>
+
+                    <!-- 23. Opções de Dieta -->
+                    <p>Qual sua dieta principal?</p>
+
+                    <label>
+                        <input type="radio" name="dieta" value="miolos" required>
+                        Miolos
+                    </label>
+
+                    <label>
+                        <input type="radio" name="dieta" value="musculos">
+                        Músculos
+                    </label>
+
+                    <label>
+                        <input type="radio" name="dieta" value="ambos">
+                        Ambos
+                    </label>
+
+                    <!-- 24. Opções de Decomposição -->
+                    <label for="decomposicao">
+                        Nível de Decomposição:
+                    </label>
+
+                    <select id="decomposicao" name="decomposicao">
+
+                        <option value="baixo">Baixo</option>
+
+                        <option value="medio">Médio</option>
+
+                        <option value="alto">Alto</option>
+
+                        <option value="completo">Completo</option>
+
+                    </select>
+
+                    <!-- 25. Botão -->
+                    <button
+                        type="submit"
+                        style="background-color: green; color: white;">
+
+                        Buscar Partida
+
+                    </button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- 25. Rodapé -->
+    <footer>
+
+        <small>
+            © 2026 The Walking Date - Todos os direitos reservados.
+        </small>
+
+    </footer>
+
+</body>
+</html>
+
