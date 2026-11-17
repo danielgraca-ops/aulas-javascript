@@ -1,0 +1,348 @@
+/* ATIVIDADE 61 A 66 - DESIGN TOKENS E VARIÁVEIS GLOBAIS */
+
+:root {
+    /* 62 - Tokens de cores base */
+    --cor-fundo-base: #1a1a1a;
+    --cor-texto-base: #e0e0e0;
+
+    /* 63 - Tokens de superfície */
+    --cor-superficie: #222222;
+
+    /* 64 - Tokens de espaçamento */
+    --espaco-p: 8px;
+    --espaco-m: 16px;
+    --espaco-g: 32px;
+
+    /* 65 - Tokens de borda */
+    --borda-suave: 8px;
+    --borda-arredondada: 50px;
+
+    /* 66 - Tokens de tipografia */
+    --fonte-principal: 'Arial', sans-serif;
+
+    /* 71 e 76 - Cores dos botões */
+    --cor-zumbi: #8bc34a;
+    --cor-sangue: #b71c1c;
+
+    /* 77 - Sombra padronizada */
+    --sombra-padrao: 0 4px 8px rgba(0,0,0,0.5);
+
+    /* 80 - Transição universal */
+    --transicao-rapida: 0.3s ease;
+}
+
+/* Tema claro */
+[data-theme="light"] {
+    --cor-fundo-base: #eeeeee;
+    --cor-texto-base: #222222;
+    --cor-superficie: #ffffff;
+}
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 67 - Refatoração do Body */
+body {
+    background-color: var(--cor-fundo-base);
+    color: var(--cor-texto-base);
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+}
+
+/* 68 - Refatoração do Cabeçalho */
+header {
+    background-color: #101010;
+    color: white;
+    padding: var(--espaco-m) var(--espaco-g);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--espaco-m);
+}
+
+/* 75 - Tipografia fluida no título */
+header h1 {
+    color: var(--cor-zumbi);
+    font-size: calc(1.5rem + 1vw);
+}
+
+/* 82 - Layout padrão empilhado */
+header {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* 83 - Menu de navegação no celular */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-p);
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 80 - Transição em links */
+a {
+    transition: all var(--transicao-rapida);
+}
+
+nav a:hover {
+    color: var(--cor-zumbi);
+}
+
+/* Botões */
+button {
+    background-color: var(--cor-zumbi);
+    color: #111;
+    border: none;
+    padding: 10px 18px;
+    border-radius: var(--borda-suave);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all var(--transicao-rapida);
+}
+
+/* 71 - Variáveis de escopo local */
+.botao-match {
+    --cor-botao: var(--cor-zumbi);
+    background-color: var(--cor-botao);
+    width: 100%;
+    margin-top: var(--espaco-m);
+    padding: 13px;
+}
+
+/* 72 - Aplicando o escopo local */
+
+/* 76 - Hover com variáveis locais */
+.botao-match:hover {
+    --cor-botao: var(--cor-sangue);
+}
+
+/* 73 - Matemática com calc() - Largura */
+main {
+    width: calc(100% - var(--espaco-g) * 2);
+    max-width: 1000px;
+    margin: var(--espaco-g) auto;
+}
+
+/* 74 - Espaçamentos dinâmicos */
+section {
+    background-color: var(--cor-superficie);
+    border: 1px solid #444;
+    border-radius: var(--borda-suave);
+    padding: var(--espaco-m);
+    margin-bottom: calc(var(--espaco-g) * 2);
+}
+
+/* Títulos */
+h2, h3 {
+    color: var(--cor-zumbi);
+    margin-bottom: var(--espaco-m);
+}
+
+/* Imagens */
+figure {
+    text-align: center;
+    margin-top: var(--espaco-m);
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: var(--borda-suave);
+    object-fit: cover;
+    transition: all var(--transicao-rapida);
+}
+
+figcaption {
+    margin-top: var(--espaco-p);
+    font-style: italic;
+}
+
+/* 84 - Benefícios no celular */
+#beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-m);
+}
+
+.lista-beneficios ol {
+    padding-left: 25px;
+}
+
+.lista-beneficios li {
+    margin-bottom: var(--espaco-p);
+}
+
+/* 69 - Refatoração do Aside */
+aside {
+    background-color: var(--cor-superficie);
+    padding: var(--espaco-m);
+    border-radius: var(--borda-suave);
+}
+
+/* 70 - Padronização de bordas */
+.cartao-zumbi,
+aside,
+fieldset,
+figure img {
+    border-radius: var(--borda-suave);
+}
+
+/* 78 - Aplicando sombras */
+aside,
+fieldset {
+    box-shadow: var(--sombra-padrao);
+}
+
+/* Depoimentos */
+blockquote {
+    font-style: italic;
+    margin-bottom: var(--espaco-p);
+}
+
+cite {
+    color: var(--cor-zumbi);
+}
+
+/* Perguntas frequentes */
+details {
+    background-color: var(--cor-fundo-base);
+    border: 1px solid #444;
+    border-radius: var(--borda-suave);
+    padding: var(--espaco-m);
+    margin-bottom: var(--espaco-p);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--cor-zumbi);
+}
+
+details p {
+    margin-top: var(--espaco-p);
+}
+
+/* Tabela */
+.tabela-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 450px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: var(--espaco-m);
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: var(--espaco-p);
+}
+
+th {
+    background-color: var(--cor-zumbi);
+    color: #111;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--cor-fundo-base);
+}
+
+/* Formulário */
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: 1px solid #444;
+    padding: var(--espaco-m);
+}
+
+legend {
+    color: var(--cor-zumbi);
+    font-weight: bold;
+    padding: 0 var(--espaco-p);
+}
+
+form > fieldset > label:not(.opcao-radio) {
+    display: block;
+    margin-top: var(--espaco-m);
+    margin-bottom: var(--espaco-p);
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: var(--borda-suave);
+    background-color: var(--cor-fundo-base);
+    color: var(--cor-texto-base);
+}
+
+.pergunta-dieta {
+    margin-top: var(--espaco-m);
+    font-weight: bold;
+}
+
+.opcao-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espaco-p);
+    margin: var(--espaco-p) var(--espaco-m) var(--espaco-p) 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #101010;
+    color: white;
+    text-align: center;
+    padding: var(--espaco-m);
+    margin-top: var(--espaco-g);
+}
+
+/* 79 - Sombra calculada no hover */
+.cartao-zumbi {
+    box-shadow: var(--sombra-padrao);
+    transition: all var(--transicao-rapida);
+}
+
+.cartao-zumbi:hover {
+    box-shadow: 0 8px calc(var(--espaco-m) * 1.5) rgba(0,0,0,0.7);
+    transform: translateY(-5px);
+}
+
+/* 80 - Transições universais */
+button,
+a,
+img {
+    transition: all var(--transicao-rapida);
+}
